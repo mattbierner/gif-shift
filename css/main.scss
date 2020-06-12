@@ -1,0 +1,53 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+// Variables
+$base-font-family: 'Source Code Pro', monospace;
+$monospace-font-family: 'Source Code Pro', monospace;
+$base-font-size:   16px;
+$base-font-weight: 300;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #484848;
+$background-color: #fdfdfd;
+$brand-color:      #FF57BB;
+$brand-color2:     #29FFE0;
+
+$border-color: #eee; 
+
+$gray:       #828282;
+$gray-light: lighten($gray, 40%);
+$gray-dark:  darken($gray, 25%);
+
+$lightest-gray: #ddd;
+$light-gray: #aaa;
+
+
+:root {
+    --monospace-font-family: #{$monospace-font-family};
+
+    --background-color: #{$background-color};
+    --text-color: #{$text-color};
+    --brand-color: #{$brand-color};
+    --brand-color2: #{$brand-color2};
+
+    --light-gray: #{$light-gray};
+    --lightest-gray: #{$lightest-gray};
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    "base",
+    "layout",
+    "search"
+    ;
+
+

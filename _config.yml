@@ -1,0 +1,21 @@
+title: "Gif Shift"
+
+description: "Editing gifs by shifting its pixels forward or backwards in time."
+
+# Build settings
+markdown: kramdown
+
+exclude: [
+    "documentation",
+    "design",
+    "node_modules",
+    "process_data",
+    "server",
+    "src",
+    "webpack.config.js",
+    "package.json",
+    "package-lock.json",
+    "README.md",
+    "tsconfig.json",
+    "LICENSE"
+]
