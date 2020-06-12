@@ -16,7 +16,7 @@ Web app for drawing in dimensions not only of sight but of time.
 
 ## Usage
 
-*Gif Shift* lets you edit gifs using a paintbrush that doesn't change the pixel contents of the gif, but instead changes which frame in the gif that pixel samples from. Imagine the brush as either pulling the painted pixels forwards in time so that they sample from future frames, or pushing them back so that sample from past frames. You can use this to create still images that sample from multiple frames of a gif or to create new animated gifs.
+*Gif Shift* lets you edit gifs using a paintbrush that doesn't change the pixel contents of the gif, but instead changes which frame in the gif that pixel samples from. Imagine the brush as either pulling the painted pixels forwards in time so that they sample from future frames, or pushing them backwards so that they sample from past frames. You can use this to create still images that sample from multiple frames of a gif or to create new animated gifs.
 
 ### Loading a gif
 
@@ -34,23 +34,23 @@ The editing tools in *Gif Shift* do not change the gif's pixel data but instead 
 
 ![The shift slider](documentation/frame-shift-slider.png)
 
-With a frame shift of 3 for example, every pixel painted using the brush tool will sample from three frame in the future instead of from the current frame.
+With a frame shift of 3 for example, every pixel painted using the brush tool will sample from three frames in the future instead of from the current frame.
 
-Gif Shift has a few basic tools to apply the shift:
+*Gif Shift* include a few basic tools you can use to apply these shifts:
 
 ![Tools](documentation/tools.png)
 
-- Brush (b) — Apply the current shift. The size of the brush is controlled by the `stroke`.
-- Eraser (e) — Clear the current shift. The size of the eraser is controlled by the `stroke`.
+- Brush (b) — Apply the current shift. The size of the brush is controlled by `stroke`.
+- Eraser (e) — Clear the current shift. The size of the eraser is controlled by `stroke`.
 - Line (g) — Draw a line that demarcates which part of the image should be shifted.
-- Quick Shift — Quickly shift part of the image (such as the left side or bottom).
+- Quick Shift — Quickly shift part of the image (such as the left half or bottom half).
 
 You can also view the current shift mask by selecting `mask` in the bottom bar of the editor:
 
 ![Viewing the shift mask](documentation/view-mask.png)
 
 - Black — No shift.
-- 100% red — The pixel has been shifted the entire length of the gif forward.
+- 100% red — The pixel has been shifted the entire length of the gif forwards.
 - 30% red (dark red) — The frame has been shifted GIF_FRAME_COUNT * 0.30 frames forward.
 - 100% blue — The pixel has been shifted the entire length of the gif backwards.
 - 30% blue (dark blue) — The frame has been shifted GIF_FRAME_COUNT * 0.30 frames backwards.
@@ -64,7 +64,7 @@ To run the site:
 ```bash
 $ npm install
 $ npm run build
-$ Jekyll serve 
+$ jekyll serve 
 ```
 
 The main scripts are under `src/`. The bundled JavaScript is output to `js/`
